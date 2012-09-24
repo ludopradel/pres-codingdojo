@@ -1,11 +1,14 @@
-.two_columns {}
+.two_columns {
+	overflow: auto;
+	width: 100%
+}
 
 .two_columns .column1 {
 	float: left;
-    width: 45%;
+    width: 50%;
 }
 
 .two_columns .column2 {
 	float: right;
-    width: 45%;
+    width: 50%;
 }
