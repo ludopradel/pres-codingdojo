@@ -8,6 +8,7 @@ Une courte présentation au sujet des coding dojo, d'où ils viennent et ce qu'i
 
 ## Branches
  * 2012.09.25-afup : présentation pour le dojo organisé par l'AFUP Toulouse le 25 sept 2012 à l'epitech
+ * 2013.02.18-afup : présentation pour le dojo organisé par l'AFUP Toulouse le 18 février 2013 à [Tau](http://tau.so)
 
 ## Credits
 Cette présentation utilise l'excellent [reveal.js](https://github.com/hakimel/reveal.js). 
