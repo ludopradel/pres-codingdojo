@@ -4,10 +4,10 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Kata Mars Rover</title>
+	<title>Kata Bowling</title>
 
-	<meta name="description" content="Description du kata Mars rover">
-	<meta name="author" content="Pierre Martin">
+	<meta name="description" content="Description du kata Bowling">
+	<meta name="author" content="Ludovic Pradel">
 
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -42,8 +42,8 @@
 			<div class="slides">
 
 				<section>
-					<h1>Kata Mars Rover</h1>
-					<p>d'après le <a href="http://amirrajan.net/Blog/code-katas-mars-rover">Dallas Hack Club</a>.</p>
+					<h1>Kata Bowling</h1>
+					<p>d'après le <a href="http://codingdojo.org/cgi-bin/wiki.pl?KataCatalogue">KataCatalogue</a>.</p>
 					<p>
 						<img width="135" src="img/lpradel.png" align="center"/>
 					</p>
@@ -53,53 +53,28 @@
 				</section>
 
 				<section>
-					<h2>Mars Rover</h2>
 					<section>
-						<h3>Objectif</h3>
-						<p>
-							Écrire une API permettant de déplacer un robot sur une grille.
-						</p>
-						<p>On vous donne :</p>
+						<h2>Objectif</h2>
+						<p>&Eacute;crire une classe BowlingGame ayant 2 m&eacute;thodes : </p>
 						<ul>
-							<li>le point de départ (x, y) du robot</li>
-							<li>sa direction initiale (N, S, E, W)</li>
-							<li>puis une suite de caractères décrivant les actions à effectuer</li>
+							<li><b>roll(pins) </b>: appel&eacute; &agrave; chaque fois qu'un joueur fait tomber une quille (<i>pin</i>). L'argument correspond au nombre de quille tomb&eacute;es.</li>
+							<li><b>score() </b>: appeler &agrave; la fin de la partie. Elle retourne le score total de la partie.</li>
 						</ul>
 					</section>
 					<section>
-						<h3>Règles</h3>
-						<ul>
-							<li class="fragment">le robot reçoit un tableau de caractères de commandes</li>
-							<li class="fragment">faire avancer / reculer le robot (f, b)</li>
-							<li class="fragment">faire tourner le robot à gauche / droite (l, r)</li>
-							<li class="fragment">seules les commandes "f, b, l et r" sont autorisées</li>
-							<li class="fragment">le monde est "rond"</li>
-							<li class="fragment">
-								gestion d'obstacles
-								<ul>
-								 	<li>avant de se déplacer le robot détecte les obstacles.</li>
-								 	<li>
-								 		si une suite de commande passe par un obstacle le robot va aussi loin
-								 		que possible et mentionne l'obstacle
-								 	</li>
-								 </ul>
-							</li>
-						</ul>
-					</section>
-					<section>
-						<h3>Exemple</h3>
-						<p>
-							Un robot situé à (0, 0) et orienté vers le Nord sur une grille de 100x100 se retrouvera
-							en (2, 2) et orienté vers l'Est si on lui transmet les commandes "ffrff"
-						</p>
-					</section>
-					<section>
-						<h3>Conseils</h3>
-						<ul>
-							<li>utilisez les tests pour résoudre le problème petit à petit</li>
-							<li>ne vous préoccupez pas (trop) de la structure de données, refactorez au fil des tests !</li>
-							<li>n'hésitez pas à tester les commandes "internes" du robot pour gagner en assurance</li>
-						</ul>
+						<h2>Rappel bowling</h2>
+						<div>
+						<img width="500" src="img/bowling.png" />
+							<ul>
+								<li class="fragment">Une partie se d&eacute;compose en 10 frames.</li>
+								<li class="fragment">2 boules lanc&eacute;es dans chaque frame (sauf Strike).</li>
+								<li class="fragment">Un Strike rapporte 10 points plus le nombre de quilles abattues aux 2 lancers suivants.</li>
+								<li class="fragment">Un Spare rapporte 10 points plus le nombre de quilles abattues au lancer suivant.</li>
+								<li class="fragment">Lors du dixi&egrave;me lancer, un strike va permettre de lancer deux boules suppl&eacute;mentaires.</li>
+								<li class="fragment">Lors du dixi&egrave;me lancer, un spare va permettre de lancer une boule suppl&eacute;mentaire.</li>
+								
+							</ul>
+						</div>
 					</section>
 				</section>
 			</div>
